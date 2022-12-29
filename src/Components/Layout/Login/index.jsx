@@ -21,29 +21,77 @@ export const Container = styled.div`
     border-radius: 1.4rem;
 
     .splash {
-      width: 50%;
-      height: 100%;
-      background: url(${Splash});
-      background-size: cover;
-      border-top-left-radius: inherit;
-      border-bottom-left-radius: inherit;
+      @media screen and (min-width: 1024px) {
+        width: 50%;
+        height: 100%;
+        background: url(${Splash});
+        background-size: cover;
+        border-top-left-radius: inherit;
+        border-bottom-left-radius: inherit;
+      }
+      @media screen and (min-width: 768px) and (max-width: 1023px) {
+        width: 50%;
+        height: 100%;
+        background: url(${Splash});
+        background-size: cover;
+        border-top-left-radius: inherit;
+        border-bottom-left-radius: inherit;
+      }
+      @media screen and (max-width: 767px) {
+        opacity: 0;
+      }
     }
 
     .content-logo {
-      width: 50%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-
-
-      .image {
+      @media screen and (min-width: 1024px) {
+        width: 50%;
+        height: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        margin-top: 12vh;
 
-        img {
-          width: 50%;
+        .image {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 12vh;
+
+          img {
+            width: 50%;
+          }
+        }
+      }
+      @media screen and (min-width: 768px) and (max-width: 1023px) {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .image {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 12vh;
+
+          img {
+            width: 50%;
+          }
+        }
+      }
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .image {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 12vh;
+
+          img {
+            width: 50%;
+          }
         }
       }
     }
@@ -66,3 +114,4 @@ export const LayoutLogin = () => {
     </>
   );
 };
+
