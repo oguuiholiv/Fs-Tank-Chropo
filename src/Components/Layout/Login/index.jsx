@@ -98,7 +98,7 @@ export const Container = styled.div`
   }
 `;
 
-export const LayoutLogin = () => {
+export const LayoutLogin = ({children}) => {
   return (
     <>
       <Container>
@@ -108,6 +108,7 @@ export const LayoutLogin = () => {
             <div className="image">
               <img src={Logo} alt="logo" />
             </div>
+            {children}
           </div>
         </div>
       </Container>
