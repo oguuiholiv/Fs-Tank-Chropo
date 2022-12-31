@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 import { LayoutLogin } from "../../Components/Layout/Login/index";
@@ -12,29 +13,26 @@ export const Container = styled.div`
 
   .info {
     margin-top: 1rem;
-    @media screen and (min-width:1024px){
+    @media screen and (min-width: 1024px) {
       p {
         text-transform: uppercase;
         font-size: 0.8em;
         color: #566a7f;
       }
-
     }
-    @media screen and (min-width:768px) and (max-width:1023px){
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
       p {
         text-transform: uppercase;
         font-size: 0.8em;
         color: #566a7f;
       }
-
     }
-    @media screen and (max-width:767px){
+    @media screen and (max-width: 767px) {
       p {
         text-transform: uppercase;
         font-size: 10px;
         color: #566a7f;
       }
-
     }
   }
   .LoginForm {
@@ -81,7 +79,9 @@ export const Login = () => {
               <input type="text" placeholder="E-mail" />
               <input type="text" placeholder="Password" />
               <p>
-                <a href="">esqueci minha senha</a>
+                <Link to="/Fs-Tank-Chropo/Forgot">
+                  <a href="">esqueci minha senha</a>
+                </Link>
               </p>
               <button type="submit">Login</button>
             </form>
