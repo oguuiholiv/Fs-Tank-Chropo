@@ -11,7 +11,7 @@ export const Container = styled.div`
   align-items: center;
 
   .content{
-    margin-top:2rem;
+    margin-top:1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
